@@ -36,26 +36,165 @@
     <link rel="canonical" href="http://www.example.com/">
     -->
 
-    <!-- Material Design Lite page styles:
-    You can choose other color schemes from the CDN, more info here http://www.getmdl.io/customize/index.html
-    Format: material.color1-color2.min.css, some examples:
-    material.red-teal.min.css
-    material.blue-orange.min.css
-    material.purple-indigo.min.css
-    -->
-
-    <!-- Material Design icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-    <!-- Your styles -->
+    <!-- My styles -->
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
+    <header class="flex-row-nowrap">
+		<div class="hamburger">
+			<div class="_layer -top"></div>
+			<div class="_layer -mid"></div>
+			<div class="_layer -bottom"></div>
+		</div>
+		<div class="logo">
+			<a href="#"><img src="images/logo.png" alt=""></a>
+		</div>
+		<div class="search">
+      		<a href="#" class="search-svg"><img src="images/search.png" alt=""></a>
+      		<div class="search-form">
+  		      <input type="text" class="form-text" placeholder="Search for..."><button class="form-btn" type="button">Go!</button>
+  		    </div>
+    	</div>
+    	<div class="addOns">
+	    	<div class="cart">
+	    		<a href="#"><img src="images/shoppingCart.png" alt=""></a>
+			</div>
+	    	<div class="logIn">
+	    		<a href="#"><img src="images/user.png" alt=""></a>
+	    	</div>
+    	</div>
 
+    </header>
+    <section class="flex-column">
+    	<div class="flex-row-wrap main-sec">
+    		<nav id="nav">
+	    		<ul class="flex-column">
+	    			<li class="nav-sub">
+	    				<span>Tronsmart</span>
+	    				<div class="popUp">
+	    					<ul>
+	    						<li><a href="">aaa</a></li>
+	    						<li><a href="">aaa</a></li>
+	    						<li><a href="">aaa</a></li>
+	    					</ul>
+	    					<img src="" alt="" width="100" height="100">
+	    				</div>
+	    			</li>
+					<li class="nav-sub">
+	    				<span>Tronsmart</span>
+	    				<div class="popUp">
+	    					<ul>
+	    						<li><a href="">aaa</a></li>
+	    						<li><a href="">aaa</a></li>
+	    						<li><a href="">aaa</a></li>
+	    					</ul>
+	    					<img src="" alt="" width="100" height="100">
+	    				</div>
+	    			</li>
+	    			<li class="nav-sub">
+	    				<span>Tronsmart</span>
+	    				<div class="popUp">
+	    					<ul>
+	    						<li><a href="">aaa</a></li>
+	    						<li><a href="">aaa</a></li>
+	    						<li><a href="">aaa</a></li>
+	    					</ul>
+	    					<img src="" alt="" width="100" height="100">
+	    				</div>
+	    			</li>
+	    			<li class="nav-sub">
+	    				<span>Tronsmart</span>
+	    				<div class="popUp">
+	    					<ul>
+	    						<li><a href="">aaa</a></li>
+	    						<li><a href="">aaa</a></li>
+	    						<li><a href="">aaa</a></li>
+	    					</ul>
+	    					<img src="" alt="" width="100" height="100">
+	    				</div>
+	    			</li>
+	    		</ul>
+    		</nav>
+    		<div class="carousel flex-column">
+				<ul class="flex-row-nowrap" style="position:relative">
+					<li class="tabChange is-active">
+						<span class="tab">title</span>
+						<div class="pro">
+							<a href=""><img src="http://Content1.geekbuying.com/banner/20160618/banner2016618121426Projector.jpg" alt=""></a>
+						</div>
+					</li>
+					<li class="tabChange">
+						<span class="tab">title</span>
+						<div class="pro">
+							<a href=""><img src="http://Content1.geekbuying.com/banner/20160622/banner2016622135040gaming.jpg" alt=""></a>
+						</div>
+					</li>
+					<li class="tabChange">
+						<span class="tab">title</span>
+						<div class="pro">
+							<a href=""><img src="http://Content1.geekbuying.com/banner/20160620/banner201662018160VERNEE-APPOLO-LITE-BANNER.jpg" alt=""></a>
+						</div>
+					</li>
+				</ul>
+				<div class="placeholder">
+					<img src="http://Content1.geekbuying.com/banner/20160620/banner201662018160VERNEE-APPOLO-LITE-BANNER.jpg" alt="">
+				</div>
+				<ul class="flex-row-nowrap">
+					<li>
+						<img src="" alt="">
+					</li>
+					<li>
+						<img src="" alt="">
+					</li>
+					<li>
+						<img src="" alt="">
+					</li>
+				</ul>
+    		</div>
+    		<aside class="aside1">aside1</aside>
+    		<div class="item1">item1</div>
+    		<aside class="aside2">aside2</aside>
+    		<div class="item2">item2</div>
+    		<aside class="aside3">aside3</aside>
+    		<div class="item3">item3</div>
+    		<aside class="aside4">aside4</aside>
+    	</div>
+    	<div class="brands">brands</div>
+    	<div class="most">most</div>
+    	<div class="official1">official1</div>
+    	<div class="official2">official2</div>
+    	<div class="official3">official3</div>
+		<div class="hottags">hottags</div>
+    </section>
+    <footer></footer>
 
-    <!-- build:js scripts/main.min.js -->
-    
-    <script src="scripts/main.js"></script>
+    <!-- build:js scripts/main.js -->
+    <script src="./scripts/main.js"></script>
+    <script>
+      (function() {
+        'use strict';
+        var toggles = {
+      		hamburger: document.querySelector('.hamburger')
+      	};
+        var tabs1 =  document.querySelectorAll('.tabChange');
+        var activeTab;
+      	function toggleClass() {
+      		this.classList.toggle('is-active');
+      	}
+        function changeTab1() {
+          activeTab = activeTab ? activeTab : document.querySelector('.tabChange.is-active');
+          activeTab.classList.remove('is-active');
+          this.classList.add('is-active');
+          activeTab = this;
+        }
+      	for (var obj in toggles) {
+    	    toggles[obj].addEventListener('click', toggleClass, false);
+      	}
+        for (var i = 0; i < tabs1.length; i++) {
+          tabs1[i].addEventListener('click', changeTab1, false);
+        }
+      }());
+    </script>
     <!-- endbuild -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -64,9 +203,8 @@
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-XXXXX-X', 'auto');
+      ga('create', 'UA-33904344-1', 'auto');
       ga('send', 'pageview');
     </script>
-    <!-- Built with love using Web Starter Kit -->
   </body>
 </html>

@@ -2,3 +2,70 @@
 Note: any .css or .scss files included in the 'styles' directory
 will be correctly compiled during `gulp serve` and `gulp`
  */
+ ul{
+   margin:0;
+   padding:0;
+ }
+ body{
+   font-size: 62.5%;
+ }
+@import "helper/normalize";
+.flex-row-nowrap{
+  display: flex;
+  flex-flow: row nowrap;
+}
+.flex-row-wrap{
+  display: flex;
+  flex-flow: row wrap;
+}
+.flex-column{
+  display:flex;
+  flex-flow: column;
+}
+
+@import "header";
+@import "layout";
+@import "nav";
+
+.carousel{
+  ul{
+    li{
+      text-align:center;
+      list-style: none;
+      flex:1;
+      .tab{}
+      .pro{
+        position:absolute;
+        top: 100%;
+        left:0;
+        opacity: 0;
+        visibility: hidden;
+        transition:opacity .5s linear;
+        width:100%;
+        img{
+          width:100%;
+          height:auto;
+        }
+      }
+      &.is-active {
+        .pro{
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+  .placeholder{
+    width:100%;
+    z-index: -1;
+    img{
+      height:280px;
+    }
+    @media (max-width: 740px) {
+      img{
+        width:100%;
+        height: auto;
+      }
+    }
+  }
+}

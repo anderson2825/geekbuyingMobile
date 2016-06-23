@@ -1,0 +1,76 @@
+section {
+  color: white;
+  .main-sec{
+    justify-content: space-between;
+  }
+  #nav{
+    order: -2;
+    background: rgb(75, 73, 73);
+    flex: 0 auto;
+  }
+  .carousel{
+    order: -1;
+    background: rgb(101, 21, 221);
+    flex: 0 740px;
+  }
+  .aside1{
+    background: rgb(236, 149, 68);
+    flex: 0 20%;
+  }
+  .aside2{
+    background: rgb(236, 149, 68);
+    flex: 0 20%;
+  }
+  .aside3{
+    background: rgb(236, 149, 68);
+    flex: 0 20%;
+  }
+  .aside4{
+    background: rgb(236, 149, 68);
+    flex: 0 20%;
+  }
+  .item1 {
+    background: rgb(213, 211, 36);
+    flex: 1 80%;
+  }
+  .item2 {
+    background: rgb(55, 237, 25);
+    flex: 1 80%;
+  }
+  .item3 {
+    background: rgb(33, 200, 205);
+    flex: 1 80%;
+  }
+  .brands{background: rgb(43, 120, 210)}
+  .most{background: rgb(21, 40, 163)}
+  .official1{background: rgb(170, 55, 224)}
+  .official2{background: rgb(228, 46, 150)}
+  .official3{background: rgb(226, 61, 61)}
+  .hottags{background: rgb(50, 6, 6)}
+  @media (max-width:1200px) {
+    .aside1{
+      order:-1;
+      flex: 1 21%;
+    }
+    .aside2{
+      order:-1;
+    }
+    .aside3{
+      order:-1;
+    }
+    .aside4{
+      order:-1;
+    }
+  }
+  @media (max-width: 740px) {
+    .carousel{
+      flex: 1 100%;
+    }
+    #nav{
+      display: none;
+    }
+    .carousel{
+      flex: 1 100%;
+    }
+  }
+}

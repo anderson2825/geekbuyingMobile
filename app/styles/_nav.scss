@@ -1,0 +1,35 @@
+#nav{
+  ul{
+    justify-content: space-around;
+    align-items: center;
+  }
+  li.nav-sub{
+    list-style: none;
+    position:relative;
+    .popUp {
+      z-index: 10;
+      display: none;
+      position:absolute;
+      top: 0;
+      left: 100%;
+      background: rgb(200, 43, 145);
+      width:300px;
+      height:200px;
+      ul{
+        float:left;
+      }
+      img{
+        float:right;
+      }
+    }
+    &:hover{
+      div.popUp {
+        display: block;
+      }
+    }
+    span{
+      color: white;
+      cursor:pointer;
+    }
+  } 
+}
